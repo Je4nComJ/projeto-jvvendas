@@ -27,7 +27,7 @@ const DonutChart = () => {
         console.log(chartData);
        }); 
 
-    }, []);
+    }, [chartData]);
 
     //FORMA ERRADA
     

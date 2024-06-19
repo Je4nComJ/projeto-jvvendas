@@ -53,7 +53,7 @@ const BarChart = () => {
         console.log(chartData);
        }); 
 
-    }, []);
+    }, [chartData]);
 
 
     const options = {
