@@ -10,3 +10,7 @@ COPY . .
 # Montar o cache do repositório Maven e executar o Maven
 RUN --mount=type=cache,id=s/2d452bfe-839d-4e66-994d-6c415e3bfdfc-m2/repository,target=/root/.m2/repository \
     chmod +x ./mvnw && ./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "jvvendas-0.0.1-SNAPSHOT.jar"]
